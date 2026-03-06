@@ -21,13 +21,13 @@ export function Hero({ title, subtitle, image, imageAlt }: HeroProps) {
         priority
         className="h-[64vh] min-h-[460px] w-full object-cover"
       />
-      <div className="absolute inset-x-0 bottom-0 p-8 text-white md:p-12">
-        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/40 bg-black/25 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em]">
+      <div className="absolute inset-x-0 bottom-0 p-6 text-white md:p-12">
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/40 bg-black/25 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] md:mb-4 md:text-xs">
           <PawPrint size={14} aria-hidden="true" />
           Hovawart-Zucht
         </div>
-        <h1 className="max-w-3xl text-balance text-4xl font-black tracking-tight md:text-6xl">{title}</h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg">{subtitle}</p>
+        <h1 className="max-w-3xl text-balance text-3xl font-black tracking-tight md:text-6xl">{title}</h1>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/90 md:text-lg">{subtitle}</p>
         <div className="mt-7 flex flex-wrap gap-3">
           <Link
             href="/unsere-wuerfe"

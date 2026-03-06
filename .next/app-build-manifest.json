@@ -1,0 +1,115 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/app/_not-found/page-d9f74993bdc3d7d6.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/css/6f30fd069bd543f7.css",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/243-36474cc2b8d69150.js",
+      "static/chunks/app/layout-7342a501c60eee42.js"
+    ],
+    "/robots.txt/route": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/app/robots.txt/route-068ba3586843ea10.js"
+    ],
+    "/sitemap.xml/route": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/app/sitemap.xml/route-068ba3586843ea10.js"
+    ],
+    "/aktuelles/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/825-cbbcd296c3078b66.js",
+      "static/chunks/243-36474cc2b8d69150.js",
+      "static/chunks/app/aktuelles/page-571d95e7b25e3dc3.js"
+    ],
+    "/unsere-zucht/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/825-cbbcd296c3078b66.js",
+      "static/chunks/243-36474cc2b8d69150.js",
+      "static/chunks/app/unsere-zucht/page-e22e18592d08120a.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/app/page-d4a2e275e9e3708d.js"
+    ],
+    "/impressum/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/app/impressum/page-36abd43ae1a0366c.js"
+    ],
+    "/datenschutz/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/app/datenschutz/page-36abd43ae1a0366c.js"
+    ],
+    "/kontakt/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/619-9168df9c2a29b74b.js",
+      "static/chunks/app/kontakt/page-842fec861f893dd8.js"
+    ],
+    "/unsere-hunde/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/825-cbbcd296c3078b66.js",
+      "static/chunks/app/unsere-hunde/page-ad3d5fc616d30b61.js"
+    ],
+    "/unsere-wuerfe/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/825-cbbcd296c3078b66.js",
+      "static/chunks/app/unsere-wuerfe/page-0101acf0a916f26d.js"
+    ],
+    "/links/page": [
+      "static/chunks/webpack-05227cd68e02a19c.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-ebd51be49873d76c.js",
+      "static/chunks/main-app-fa1c9163cf8aa57a.js",
+      "static/chunks/356-d0844c783e18394b.js",
+      "static/chunks/app/links/page-36abd43ae1a0366c.js"
+    ]
+  }
+}

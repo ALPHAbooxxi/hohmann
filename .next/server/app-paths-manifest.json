@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/aktuelles/page": "app/aktuelles/page.js",
+  "/unsere-zucht/page": "app/unsere-zucht/page.js",
+  "/page": "app/page.js",
+  "/impressum/page": "app/impressum/page.js",
+  "/datenschutz/page": "app/datenschutz/page.js",
+  "/kontakt/page": "app/kontakt/page.js",
+  "/unsere-hunde/page": "app/unsere-hunde/page.js",
+  "/unsere-wuerfe/page": "app/unsere-wuerfe/page.js",
+  "/links/page": "app/links/page.js"
+}

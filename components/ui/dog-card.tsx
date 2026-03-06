@@ -1,16 +1,22 @@
 import Image from "next/image";
-import { Bone, Dog, PawPrint } from "lucide-react";
+import { Bone, Dog, PawPrint, Maximize2 } from "lucide-react";
 
 import type { DogProfile } from "@/lib/site-data";
 
 type DogCardProps = {
   dog: DogProfile;
+  onClick?: () => void;
 };
 
-export function DogCard({ dog }: DogCardProps) {
+export function DogCard({ dog, onClick }: DogCardProps) {
   return (
     <article className="overflow-hidden rounded-3xl border border-brand-clay/60 bg-white shadow-soft">
-      <Image src={dog.image} alt={dog.name} width={1000} height={700} className="h-64 w-full object-cover" />
+      <div className="relative cursor-zoom-in group" onClick={onClick}>
+        <Image src={dog.image} alt={dog.name} width={1000} height={700} className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10 flex items-center justify-center">
+          <Maximize2 size={32} className="text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+        </div>
+      </div>
       <div className="space-y-4 p-6">
         <header className="flex items-start justify-between gap-3">
           <div>

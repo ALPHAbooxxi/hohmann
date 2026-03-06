@@ -44,18 +44,31 @@ export default function HomePage() {
           title="Rassezuchtverein (RZV)"
           icon={<Dog size={18} aria-hidden="true" />}
         >
-          <p>{homeIntro.rzvText}</p>
-          <p>
-            <a
-              className="inline-flex items-center gap-2 font-semibold text-brand-bark underline underline-offset-4"
-              href={homeIntro.rzvLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Zur offiziellen RZV-Website
-              <ExternalLink size={15} aria-hidden="true" />
-            </a>
-          </p>
+          <div className="flex flex-col md:flex-row gap-6 items-start">
+            <div className="flex-1 space-y-4">
+              <p>{homeIntro.rzvText}</p>
+              <p>
+                <a
+                  className="inline-flex items-center gap-2 font-semibold text-brand-bark underline underline-offset-4"
+                  href={homeIntro.rzvLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Zur offiziellen RZV-Website
+                  <ExternalLink size={15} aria-hidden="true" />
+                </a>
+              </p>
+            </div>
+            <div className="shrink-0">
+              <Image
+                src="/images/rzv-hovawart_logo.svg"
+                alt="RZV Hovawart Logo"
+                width={120}
+                height={120}
+                className="h-auto w-24 md:w-32 opacity-90"
+              />
+            </div>
+          </div>
         </InfoBox>
 
         <InfoBox title="Kontakt" icon={<Phone size={18} aria-hidden="true" />}>

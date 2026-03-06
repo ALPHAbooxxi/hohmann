@@ -26,59 +26,55 @@ export default function KontaktPage() {
           subtitle={contactPage.locationText}
         />
 
-        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <InfoBox title="Kontaktdaten" icon={<Phone size={18} aria-hidden="true" />}>
-            <p className="flex items-center gap-2">
-              <Phone size={15} className="text-brand-bark" aria-hidden="true" />
-              <Link href={contact.phoneHref}>{contact.phone}</Link>
-            </p>
-            <p className="flex items-center gap-2">
-              <MapPin size={15} className="text-brand-bark" aria-hidden="true" />
-              <span>{contact.address}</span>
-            </p>
-            <p className="flex items-center gap-2">
-              <Mail size={15} className="text-brand-bark" aria-hidden="true" />
-              <Link href={contact.mailHref}>{contact.mail}</Link>
-            </p>
-          </InfoBox>
+        <div className="mx-auto max-w-4xl space-y-8">
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* Telefon Card */}
+            <div className="group relative overflow-hidden rounded-[2.5rem] border border-brand-clay/60 bg-white p-10 shadow-soft transition-all hover:border-brand-bark/40 hover:shadow-card">
+              <div className="flex flex-col items-center text-center space-y-6">
+                <div className="rounded-full bg-brand-sand p-5 text-brand-bark transition-transform duration-500 group-hover:scale-110">
+                  <Phone size={40} strokeWidth={1.5} aria-hidden="true" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-brand-barkDark uppercase tracking-wider">Telefonisch</h3>
+                  <p className="text-sm text-brand-ink/60">Für alle Fragen rund um unsere Zucht.</p>
+                </div>
+                <Link
+                  href={contact.phoneHref}
+                  className="inline-flex h-14 items-center justify-center rounded-2xl bg-brand-sand px-8 text-xl font-bold text-brand-bark transition hover:bg-brand-bark hover:text-white"
+                >
+                  {contact.phone}
+                </Link>
+              </div>
+            </div>
 
-          <section className="rounded-3xl border border-brand-clay/60 bg-white p-6 shadow-soft">
-            <h2 className="mb-4 text-2xl font-bold text-brand-ink">Kontaktformular</h2>
-            <p className="mb-6 text-sm text-brand-ink/70">
-              Das Formular entspricht inhaltlich dem bisherigen Aufbau und kann bei Bedarf mit Backend-Logik verbunden werden.
-            </p>
-            <form className="space-y-4" aria-label="Kontaktformular">
-              <label className="block text-sm font-semibold text-brand-ink/80">
-                Ihr Name *
-                <input type="text" required className="mt-1 w-full rounded-xl border border-brand-clay/70 px-3 py-2 text-sm" />
-              </label>
-              <label className="block text-sm font-semibold text-brand-ink/80">
-                Ihre Telefonnummer *
-                <input type="tel" required className="mt-1 w-full rounded-xl border border-brand-clay/70 px-3 py-2 text-sm" />
-              </label>
-              <label className="block text-sm font-semibold text-brand-ink/80">
-                Ihre E-Mail-Adresse *
-                <input type="email" required className="mt-1 w-full rounded-xl border border-brand-clay/70 px-3 py-2 text-sm" />
-              </label>
-              <label className="block text-sm font-semibold text-brand-ink/80">
-                Ihre Mitteilung
-                <textarea rows={5} className="mt-1 w-full rounded-xl border border-brand-clay/70 px-3 py-2 text-sm" />
-              </label>
-              <label className="flex items-start gap-2 text-sm text-brand-ink/75">
-                <input type="checkbox" required className="mt-1" />
-                <span>
-                  Datenschutz * Ich stimme der Verarbeitung meiner Daten gemäß der{" "}
-                  <Link href="/datenschutz" className="underline underline-offset-4">
-                    Datenschutzerklärung
-                  </Link>{" "}
-                  zu.
-                </span>
-              </label>
-              <button type="submit" className="rounded-full bg-brand-bark px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-barkDark">
-                Nachricht senden
-              </button>
-            </form>
-          </section>
+            {/* E-Mail Card */}
+            <div className="group relative overflow-hidden rounded-[2.5rem] border border-brand-clay/60 bg-white p-10 shadow-soft transition-all hover:border-brand-bark/40 hover:shadow-card">
+              <div className="flex flex-col items-center text-center space-y-6">
+                <div className="rounded-full bg-brand-sand p-5 text-brand-bark transition-transform duration-500 group-hover:scale-110">
+                  <Mail size={40} strokeWidth={1.5} aria-hidden="true" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-brand-barkDark uppercase tracking-wider">Per E-Mail</h3>
+                  <p className="text-sm text-brand-ink/60">Schreiben Sie uns gerne eine Nachricht.</p>
+                </div>
+                <Link
+                  href={contact.mailHref}
+                  className="inline-flex h-14 items-center justify-center rounded-2xl bg-brand-sand px-8 text-lg font-bold text-brand-bark transition hover:bg-brand-bark hover:text-white"
+                >
+                  {contact.mail}
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Address Box */}
+          <div className="flex flex-col items-center justify-center py-6 text-center">
+            <div className="mb-3 rounded-full bg-brand-sand p-3 text-brand-bark">
+              <MapPin size={24} aria-hidden="true" />
+            </div>
+            <h3 className="mb-1 text-sm font-bold uppercase tracking-[0.2em] text-brand-bark/60">Anschrift</h3>
+            <p className="text-xl font-semibold text-brand-ink">{contact.address}</p>
+          </div>
         </div>
       </section>
     </div>

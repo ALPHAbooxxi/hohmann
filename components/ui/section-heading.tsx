@@ -6,18 +6,20 @@ type SectionHeadingProps = {
   subtitle?: string;
   align?: "left" | "center";
   action?: ReactNode;
+  className?: string;
 };
 
 export function SectionHeading({
   title,
   subtitle,
   align = "left",
-  action
+  action,
+  className = ""
 }: SectionHeadingProps) {
   const alignClass = align === "center" ? "items-center text-center" : "items-start";
 
   return (
-    <div className={`mb-8 flex flex-col gap-3 ${alignClass}`}>
+    <div className={`mb-8 flex flex-col gap-3 ${alignClass} ${className}`}>
       <div className="inline-flex items-center gap-2 rounded-full border border-brand-clay/70 bg-brand-sand px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-brand-bark">
         <PawPrint size={14} aria-hidden="true" />
         Zwinger aus dem Emsland

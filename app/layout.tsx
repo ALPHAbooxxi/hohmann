@@ -23,7 +23,7 @@ const accentFont = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   title: {
-    default: siteMeta.claim,
+    default: `${siteMeta.name} | ${siteMeta.claim}`,
     template: `%s | ${siteMeta.name}`
   },
   description: siteMeta.description,
@@ -32,20 +32,38 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: siteMeta.claim,
+    title: siteMeta.name,
     description: siteMeta.description,
+    url: 'https://www.emsland-hovawarte.de',
+    siteName: siteMeta.name,
     locale: "de_DE",
     type: "website",
-    siteName: siteMeta.name,
     images: [
       {
         url: "/images/hero/hero-hovawarte.jpg",
-        width: 1600,
-        height: 920,
-        alt: "Hovawarte im Zwinger aus dem Emsland"
+        width: 1200,
+        height: 630,
+        alt: "Hovawart-Zucht im Emsland"
       }
     ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteMeta.name,
+    description: siteMeta.description,
+    images: ['/images/hero/hero-hovawarte.jpg'],
   }
 };
 
