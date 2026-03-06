@@ -71,6 +71,8 @@ export const footerItems: NavItem[] = [
 export const contact = {
   phone: "05907-9495130",
   phoneHref: "tel:+4959079495130",
+  mobile: "0171-3128710",
+  mobileHref: "tel:+491713128710",
   address: "Kottenkamps-Sand 4, 49744 Geeste",
   mail: "eveline.hohmann@web.de",
   mailHref: "mailto:eveline.hohmann@web.de"
@@ -115,14 +117,14 @@ export const homeTeasers = [
 
 export const newsItems: NewsItem[] = [
   {
-    title: "Hurra! Timba bekommt Welpen!",
-    dateLabel: "voraussichtlich Anfang März 2026",
+    title: "Hurra! Timba hat Welpen bekommen!",
+    dateLabel: "01. 03. 2026",
     excerpt:
-      "Der X-Wurf ist auf dem Weg. Wenn Sie an einem Welpen interessiert sind, melden Sie sich bitte telefonisch oder per Mail bei uns. Linkes Foto: Bud von der Layhöhe, rechtes Foto: Timba aus dem Emsland.",
-    image: "/images/wuerfe/x-wurf-planung.jpg",
+      "Am 01. 03. 2026 wurden 8 Welpen im Zwinger aus dem Emsland geboren. 3x Rüden und 5x Hündinnen. Wenn Sie an einem Welpen interessiert sind, melden Sie sich bitte telefonisch oder per Mail bei uns.",
+    image: "/images/wuerfe/x_wurf_2.jpeg",
     images: [
-      "/images/old-site/w7e341d172226001432d247a76c8310b/acf58949-30f5-4695-b107-bf8f294ba92ad959.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/timba-aus-dem-emslandd959.jpg"
+      "/images/wuerfe/x_wurf_1.jpeg",
+      "/images/wuerfe/x_wurf_2.jpeg"
     ]
   },
   {

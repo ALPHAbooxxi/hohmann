@@ -38,12 +38,20 @@ export default function KontaktPage() {
                   <h3 className="text-xl font-bold text-brand-barkDark uppercase tracking-wider">Telefonisch</h3>
                   <p className="text-sm text-brand-ink/60">Für alle Fragen rund um unsere Zucht.</p>
                 </div>
-                <Link
-                  href={contact.phoneHref}
-                  className="inline-flex h-14 items-center justify-center rounded-2xl bg-brand-sand px-8 text-xl font-bold text-brand-bark transition hover:bg-brand-bark hover:text-white"
-                >
-                  {contact.phone}
-                </Link>
+                <div className="flex flex-col gap-3 w-full">
+                  <Link
+                    href={contact.phoneHref}
+                    className="inline-flex h-14 items-center justify-center rounded-2xl bg-brand-sand px-8 text-xl font-bold text-brand-bark transition hover:bg-brand-bark hover:text-white"
+                  >
+                    {contact.phone}
+                  </Link>
+                  <Link
+                    href={contact.mobileHref}
+                    className="inline-flex h-14 items-center justify-center rounded-2xl bg-brand-sand px-8 text-xl font-bold text-brand-bark transition hover:bg-brand-bark hover:text-white"
+                  >
+                    {contact.mobile}
+                  </Link>
+                </div>
               </div>
             </div>
 
