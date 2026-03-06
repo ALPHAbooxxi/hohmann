@@ -31,15 +31,24 @@ export function NewsModal({ item, onClose }: NewsModalProps) {
 
       return (
             <AnimatePresence>
-                  <div className="fixed inset-0 z-50 overflow-y-auto">
+                  <div className="fixed inset-0 z-[60] overflow-y-auto">
                         {/* Backdrop - fixed behind the scrollable content */}
                         <motion.div
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               exit={{ opacity: 0 }}
                               onClick={onClose}
-                              className="fixed inset-0 bg-brand-barkDark/60 backdrop-blur-sm"
+                              className="fixed inset-0 bg-black/80 backdrop-blur-md"
                         />
+
+                        {/* Persistent Close Button - Fixed to viewport */}
+                        <button
+                              onClick={onClose}
+                              className="fixed right-4 top-4 z-[70] rounded-full bg-white/10 p-3 text-white backdrop-blur-md transition-colors hover:bg-white/20 md:right-8 md:top-8"
+                              aria-label="Schließen"
+                        >
+                              <X size={28} />
+                        </button>
 
                         {/* Scrollable Container Wrapper */}
                         <div className="min-h-full flex items-center justify-center p-4 md:p-12 pointer-events-none">
@@ -51,14 +60,6 @@ export function NewsModal({ item, onClose }: NewsModalProps) {
                                     className="relative w-full max-w-4xl overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white shadow-2xl pointer-events-auto"
                                     onClick={(e) => e.stopPropagation()}
                               >
-                                    {/* Close Button */}
-                                    <button
-                                          onClick={onClose}
-                                          className="absolute right-6 top-6 z-10 rounded-full bg-white/10 p-2 text-brand-ink/50 transition-colors hover:bg-brand-sand hover:text-brand-barkDark md:bg-brand-sand/50 md:text-brand-ink"
-                                    >
-                                          <X size={24} />
-                                    </button>
-
                                     <div className="flex flex-col">
                                           {/* Header Image */}
                                           <div className="relative h-64 w-full shrink-0 md:h-80 lg:h-[400px]">

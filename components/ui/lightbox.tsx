@@ -27,34 +27,38 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
             document.body.style.overflow = "hidden";
             return () => {
                   window.removeEventListener("keydown", handleKeyDown);
-                  document.body.style.overflow = "auto";
+                  // We don't unlock here if we are on top of another modal
+                  // But since NewsModal also has the lock, it will handle it when it closes
             };
-      }, [onClose, images.length]);
+      }, [onClose]);
 
       return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
+            <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4">
                   <button
                         onClick={onClose}
-                        className="absolute right-6 top-6 z-50 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
+                        className="fixed right-4 top-4 z-[90] rounded-full bg-white/10 p-3 text-white backdrop-blur-md transition hover:bg-white/20 md:right-8 md:top-8"
+                        aria-label="Schließen"
                   >
                         <X size={32} />
                   </button>
 
                   <button
                         onClick={(e) => { e.stopPropagation(); prev(); }}
-                        className="absolute left-4 z-50 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
+                        className="absolute left-4 z-[85] rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
+                        aria-label="Vorheriges Bild"
                   >
                         <ChevronLeft size={40} />
                   </button>
 
                   <button
                         onClick={(e) => { e.stopPropagation(); next(); }}
-                        className="absolute right-4 z-50 rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
+                        className="absolute right-4 z-[85] rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
+                        aria-label="Nächstes Bild"
                   >
                         <ChevronRight size={40} />
                   </button>
 
-                  <div className="relative h-full w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+                  <div className="relative h-full w-full max-w-6xl pointer-events-none flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
                         <AnimatePresence mode="wait">
                               <motion.div
                                     key={currentIndex}
@@ -62,7 +66,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     transition={{ duration: 0.2 }}
-                                    className="flex h-full w-full items-center justify-center"
+                                    className="flex h-full w-full items-center justify-center pointer-events-auto"
                               >
                                     <div className="relative max-h-[85vh] w-full">
                                           <Image
@@ -77,7 +81,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
                               </motion.div>
                         </AnimatePresence>
 
-                        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/70">
+                        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/70 font-medium">
                               {currentIndex + 1} / {images.length}
                         </div>
                   </div>
