@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  color: #2a2320;
+  background: linear-gradient(180deg, #f7f2eb 0%, #f3ede3 44%, #f9f5ef 100%);
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle at 8% 16%, rgba(142, 98, 63, 0.1) 0 56px, transparent 56px),
+    radial-gradient(circle at 88% 22%, rgba(85, 107, 73, 0.09) 0 62px, transparent 62px),
+    radial-gradient(circle at 73% 74%, rgba(142, 98, 63, 0.08) 0 84px, transparent 84px),
+    radial-gradient(circle at 12% 84%, rgba(85, 107, 73, 0.08) 0 72px, transparent 72px);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-accent), Georgia, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.prose-block p {
+  margin: 0;
+}
