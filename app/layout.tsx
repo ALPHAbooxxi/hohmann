@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     title: siteMeta.name,
     description: siteMeta.description,
     images: ['/images/hero/hero-hovawarte.jpg'],
+  },
+  icons: {
+    icon: '/favicon.png',
   }
 };
 
