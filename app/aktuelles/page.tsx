@@ -14,7 +14,6 @@ export default function AktuellesPage() {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
 
   const featuredNews = newsItems[0];
-  const otherNews = newsItems.slice(1);
 
   return (
     <div className="space-y-12 pb-16">
@@ -61,38 +60,6 @@ export default function AktuellesPage() {
             </div>
           </article>
         )}
-
-        {/* Other News Items */}
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {otherNews.map((item) => (
-            <article
-              key={`${item.title}-${item.dateLabel}`}
-              className="group flex flex-col cursor-pointer overflow-hidden rounded-[2rem] border border-brand-clay/50 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
-              onClick={() => setSelectedNews(item)}
-            >
-              <div className="relative h-56 w-full overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex flex-1 flex-col space-y-4 p-6">
-                <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-brand-barkDark">
-                  <CalendarDays size={14} aria-hidden="true" />
-                  {item.dateLabel}
-                </p>
-                <h2 className="text-2xl font-bold leading-snug text-brand-ink">{item.title}</h2>
-                <p className="flex-1 line-clamp-3 text-sm leading-relaxed text-brand-ink/85">{item.excerpt}</p>
-
-                <div className="flex items-center gap-2 pt-2 text-sm font-bold text-brand-barkDark transition-colors group-hover:text-brand-terracotta">
-                  Details <ArrowRight size={14} />
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
       </section>
 
       {/* Article Detail Modal */}

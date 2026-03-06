@@ -34,6 +34,7 @@ export type Litter = {
   count: string;
   descendants: string[];
   images: string[];
+  updates?: NewsItem[];
 };
 
 export const siteMeta = {
@@ -125,151 +126,6 @@ export const newsItems: NewsItem[] = [
     images: [
       "/images/wuerfe/x_wurf_1.jpeg",
       "/images/wuerfe/x_wurf_2.jpeg"
-    ]
-  },
-  {
-    title: "X-Wurf aus dem Emsland",
-    dateLabel: "Herbst/Winter 2025 (Planung)",
-    excerpt: "Der X-Wurf aus dem Emsland ist für Herbst/Winter 2025 geplant.",
-    image: "/images/wuerfe/timba-portrait.jpg",
-    images: [
-      "/images/old-site/w7e341d172226001432d247a76c8310b/timba-aus-dem-emsland7482.jpg"
-    ]
-  },
-  {
-    title: "Welpentreffen vom W-Wurf",
-    dateLabel: "23.02.2025",
-    excerpt:
-      "Drei Welpen aus dem W-Wurf kamen zum DVG Hundeplatz nach Meppen. Links im Bild ist Mama Timba aus dem Emsland, mittig die drei Welpen im Alter von 6 Monaten und rechts Papa Ray.",
-    image: "/images/wuerfe/w-wurf-welpentreffen.jpg",
-    images: [
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/dsc_04016fbd.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0295.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/dsc_0061a.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0419.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0425.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0025.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0030.jpg"
-    ]
-  },
-  {
-    title: "Welpentreffen vom V-Wurf",
-    dateLabel: "23.02.2025",
-    excerpt:
-      "Vier Rüden aus dem V-Wurf kamen am 23.02.2025 zum DVG Hundeplatz nach Meppen zum Welpentreffen.",
-    image: "/images/wuerfe/v-wurf-welpentreffen.jpg",
-    images: [
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0327.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0033.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0170a.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0182.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0234.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0305a.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0498.jpg",
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0542.jpg"
-    ]
-  },
-  {
-    title: "Urus aus dem Emsland, Europasieger 2025, German Winner 2025, Best Of Breed 2025 im In- und Ausland",
-    dateLabel: "Saison 2025",
-    excerpt:
-      "Urus aus dem Emsland wurde Europasieger 2025, German Winner 2025 und Best of Breed 2025 im In- und Ausland. Wir sind sehr stolz auf diese herausragenden Erfolge!",
-    image: "/images/old-site/w7e341d172226001432d247a76c8310b/w7e951a0b2c310021ead1acc6d2551d4/whatsapp-image-2025-05-26-at-10.52.04-_3__1_.jpg",
-    images: [
-      "/images/old-site/w7e341d172226001432d247a76c8310b/w7e951a0b2c310021ead1acc6d2551d4/whatsapp-image-2025-05-26-at-10.52.04-_3__1_.jpg"
-    ]
-  },
-  {
-    title: "Nachzuchtbeurteilung U-Wurf",
-    dateLabel: "16.03.2024",
-    excerpt:
-      "Sechs von sieben Welpen aus dem U-Wurf haben in Delmenhorst erfolgreich an der Nachzuchtbeurteilung teilgenommen.",
-    image: "/images/wuerfe/u-wurf-nachzucht.jpg",
-    images: [
-      "/images/wuerfe/u-wurf-nachzucht.jpg"
-    ]
-  },
-  {
-    title: "Welpentreffen vom U-Wurf",
-    dateLabel: "01.10.2023",
-    excerpt: "Ein toller Tag mit dem U-Wurf! Viele Welpen und ihre Besitzer kamen zum gemeinsamen Treffen zusammen.",
-    image: "/images/old-site/Welpentreffen_1.jpg",
-    images: [
-      "/images/old-site/Welpentreffen_0.jpg",
-      "/images/old-site/Welpentreffen_1.jpg",
-      "/images/old-site/Welpentreffen_2.jpg",
-      "/images/old-site/Welpentreffen_3.jpg",
-      "/images/old-site/Welpentreffen_4.jpg",
-      "/images/old-site/Welpentreffen_5.jpg",
-      "/images/old-site/Welpentreffen_6.jpg",
-      "/images/old-site/Welpentreffen_7.jpg",
-      "/images/old-site/Welpentreffen_8.jpg",
-      "/images/old-site/Welpentreffen_9.jpg",
-      "/images/old-site/Welpentreffen_10.jpg",
-      "/images/old-site/Welpentreffen_11.jpg",
-      "/images/old-site/Welpentreffen_12.1.jpg"
-    ]
-  },
-  {
-    title: "Morro: Deutscher Meister & Vize-Weltmeister",
-    dateLabel: "Wettkampfsaison",
-    excerpt:
-      "Morro aus dem Emsland wurde Deutscher Meister der Fährtenhunde und Vize-Weltmeister bei den Internationalen Fährtenhunden.",
-    image: "/images/wuerfe/morro-erfolg.jpg",
-    images: [
-      "/images/wuerfe/morro-erfolg.jpg",
-      "/images/old-site/Sonja und Morro.jpg"
-    ]
-  },
-  {
-    title: "S-Wurf Welpentreffen",
-    dateLabel: "08.08.2021",
-    excerpt: "Welpentreffen vom S-Wurf aus dem Emsland in Meppen.",
-    image: "/images/wuerfe/s-wurf-treffen.jpg",
-    images: [
-      "/images/wuerfe/s-wurf-treffen.jpg",
-      "/images/old-site/Welpentreffen_52.jpg",
-      "/images/old-site/Welpentreffen_40.jpg",
-      "/images/old-site/Welpentreffen_17.jpg",
-      "/images/old-site/Welpentreffen_49.jpg",
-      "/images/old-site/Welpentreffen_47.jpg",
-      "/images/old-site/Welpentreffen_48.jpg",
-      "/images/old-site/Welpentreffen_22.jpg",
-      "/images/old-site/Welpentreffen_27.jpg",
-      "/images/old-site/Welpentreffen_31.jpg",
-      "/images/old-site/Welpentreffen_34.jpg"
-    ]
-  },
-  {
-    title: "R-Wurf Welpentreffen",
-    dateLabel: "12.01.2020",
-    excerpt: "Welpentreffen vom R-Wurf aus dem Emsland in Bobenheim-Roxheim.",
-    image: "/images/wuerfe/r-wurf-treffen.jpg",
-    images: [
-      "/images/wuerfe/r-wurf-treffen.jpg",
-      "/images/old-site/IMG_4139-Renner.jpg",
-      "/images/old-site/IMG_4124-Ringo.jpg",
-      "/images/old-site/IMG_4112-Rufus.jpg",
-      "/images/old-site/IMG_4084-Räuber.jpg",
-      "/images/old-site/IMG_4169.jpg",
-      "/images/old-site/IMG_4093-Ronja.jpg"
-    ]
-  },
-  {
-    title: "ZTP von Questa",
-    dateLabel: "15.09.2018",
-    excerpt: "ZTP von Questa in Gummersbach.",
-    image: "/images/hunde/questa-ztp.jpg",
-    images: [
-      "/images/hunde/questa-ztp.jpg",
-      "/images/old-site/DSC_4591.jpg",
-      "/images/old-site/DSC_4604.jpg",
-      "/images/old-site/DSC_4610.jpg",
-      "/images/old-site/DSC_4618.jpg",
-      "/images/old-site/DSC_4624.jpg",
-      "/images/old-site/DSC_4632.jpg",
-      "/images/old-site/DSC_4647.jpg",
-      "/images/old-site/DSC_4652.jpg"
     ]
   }
 ];
@@ -391,6 +247,24 @@ export const litters: Litter[] = [
       "/images/old-site/W-Wurf_Woche5h.jpg",
       "/images/old-site/Wigo_5Wochen.jpg",
       "/images/old-site/Walker_5Wochen.jpg"
+    ],
+    updates: [
+      {
+        title: "Welpentreffen vom W-Wurf",
+        dateLabel: "23.02.2025",
+        excerpt:
+          "Drei Welpen aus dem W-Wurf kamen zum DVG Hundeplatz nach Meppen. Links im Bild ist Mama Timba aus dem Emsland, mittig die drei Welpen im Alter von 6 Monaten und rechts Papa Ray.",
+        image: "/images/wuerfe/w-wurf-welpentreffen.jpg",
+        images: [
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/dsc_04016fbd.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0295.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/dsc_0061a.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0419.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0425.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0025.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060f0804003195521b48297a982/DSC_0030.jpg"
+        ]
+      }
     ]
   },
   {
@@ -423,6 +297,25 @@ export const litters: Litter[] = [
       "/images/old-site/V-Wurf_Woche6b.jpg",
       "/images/old-site/V-Wurf_Woche6c.jpg",
       "/images/old-site/V-Wurf_Woche6d.jpg"
+    ],
+    updates: [
+      {
+        title: "Welpentreffen vom V-Wurf",
+        dateLabel: "23.02.2025",
+        excerpt:
+          "Vier Rüden aus dem V-Wurf kamen am 23.02.2025 zum DVG Hundeplatz nach Meppen zum Welpentreffen.",
+        image: "/images/wuerfe/v-wurf-welpentreffen.jpg",
+        images: [
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0327.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0033.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0170a.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0182.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0234.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0305a.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0498.jpg",
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e94060e24290030c348d0744f13a7a/DSC_0542.jpg"
+        ]
+      }
     ]
   },
   {
@@ -449,6 +342,49 @@ export const litters: Litter[] = [
       "/images/old-site/U-Wurf_5.Woche_8.jpg",
       "/images/old-site/U-Wurf_8.Woche_Usaro.jpg",
       "/images/old-site/U-Wurf_8.Woche_Usana.jpg"
+    ],
+    updates: [
+      {
+        title: "Urus aus dem Emsland, Europasieger 2025, German Winner 2025, Best Of Breed 2025 im In- und Ausland",
+        dateLabel: "Saison 2025",
+        excerpt:
+          "Urus aus dem Emsland wurde Europasieger 2025, German Winner 2025 und Best of Breed 2025 im In- und Ausland. Wir sind sehr stolz auf diese herausragenden Erfolge!",
+        image: "/images/old-site/w7e341d172226001432d247a76c8310b/w7e951a0b2c310021ead1acc6d2551d4/whatsapp-image-2025-05-26-at-10.52.04-_3__1_.jpg",
+        images: [
+          "/images/old-site/w7e341d172226001432d247a76c8310b/w7e951a0b2c310021ead1acc6d2551d4/whatsapp-image-2025-05-26-at-10.52.04-_3__1_.jpg"
+        ]
+      },
+      {
+        title: "Nachzuchtbeurteilung U-Wurf",
+        dateLabel: "16.03.2024",
+        excerpt:
+          "Sechs von sieben Welpen aus dem U-Wurf haben in Delmenhorst erfolgreich an der Nachzuchtbeurteilung teilgenommen.",
+        image: "/images/wuerfe/u-wurf-nachzucht.jpg",
+        images: [
+          "/images/wuerfe/u-wurf-nachzucht.jpg"
+        ]
+      },
+      {
+        title: "Welpentreffen vom U-Wurf",
+        dateLabel: "01.10.2023",
+        excerpt: "Ein toller Tag mit dem U-Wurf! Viele Welpen und ihre Besitzer kamen zum gemeinsamen Treffen zusammen.",
+        image: "/images/old-site/Welpentreffen_1.jpg",
+        images: [
+          "/images/old-site/Welpentreffen_0.jpg",
+          "/images/old-site/Welpentreffen_1.jpg",
+          "/images/old-site/Welpentreffen_2.jpg",
+          "/images/old-site/Welpentreffen_3.jpg",
+          "/images/old-site/Welpentreffen_4.jpg",
+          "/images/old-site/Welpentreffen_5.jpg",
+          "/images/old-site/Welpentreffen_6.jpg",
+          "/images/old-site/Welpentreffen_7.jpg",
+          "/images/old-site/Welpentreffen_8.jpg",
+          "/images/old-site/Welpentreffen_9.jpg",
+          "/images/old-site/Welpentreffen_10.jpg",
+          "/images/old-site/Welpentreffen_11.jpg",
+          "/images/old-site/Welpentreffen_12.1.jpg"
+        ]
+      }
     ]
   },
   {
@@ -507,6 +443,27 @@ export const litters: Litter[] = [
       "/images/old-site/s-wurf_5wochen_umzug10.jpg",
       "/images/old-site/s-wurf_7wochen_spielen1.jpg",
       "/images/old-site/S-Wurf_7Wochen_Hundeplatz7.jpg"
+    ],
+    updates: [
+      {
+        title: "S-Wurf Welpentreffen",
+        dateLabel: "08.08.2021",
+        excerpt: "Welpentreffen vom S-Wurf aus dem Emsland in Meppen.",
+        image: "/images/wuerfe/s-wurf-treffen.jpg",
+        images: [
+          "/images/wuerfe/s-wurf-treffen.jpg",
+          "/images/old-site/Welpentreffen_52.jpg",
+          "/images/old-site/Welpentreffen_40.jpg",
+          "/images/old-site/Welpentreffen_17.jpg",
+          "/images/old-site/Welpentreffen_49.jpg",
+          "/images/old-site/Welpentreffen_47.jpg",
+          "/images/old-site/Welpentreffen_48.jpg",
+          "/images/old-site/Welpentreffen_22.jpg",
+          "/images/old-site/Welpentreffen_27.jpg",
+          "/images/old-site/Welpentreffen_31.jpg",
+          "/images/old-site/Welpentreffen_34.jpg"
+        ]
+      }
     ]
   },
   {
@@ -535,6 +492,23 @@ export const litters: Litter[] = [
       "/images/old-site/IMG_7766.jpg",
       "/images/old-site/IMG_7814.jpg",
       "/images/old-site/IMG_7850.jpg"
+    ],
+    updates: [
+      {
+        title: "R-Wurf Welpentreffen",
+        dateLabel: "12.01.2020",
+        excerpt: "Welpentreffen vom R-Wurf aus dem Emsland in Bobenheim-Roxheim.",
+        image: "/images/wuerfe/r-wurf-treffen.jpg",
+        images: [
+          "/images/wuerfe/r-wurf-treffen.jpg",
+          "/images/old-site/IMG_4139-Renner.jpg",
+          "/images/old-site/IMG_4124-Ringo.jpg",
+          "/images/old-site/IMG_4112-Rufus.jpg",
+          "/images/old-site/IMG_4084-Räuber.jpg",
+          "/images/old-site/IMG_4169.jpg",
+          "/images/old-site/IMG_4093-Ronja.jpg"
+        ]
+      }
     ]
   },
   {
@@ -562,6 +536,25 @@ export const litters: Litter[] = [
       "/images/old-site/w7e341d172226001432d247a76c8310b/Q_Wurf_Woche7_s.jpg",
       "/images/old-site/w7e341d172226001432d247a76c8310b/quessa.jpg",
       "/images/old-site/w7e341d172226001432d247a76c8310b/Jara und Questa.jpg"
+    ],
+    updates: [
+      {
+        title: "ZTP von Questa",
+        dateLabel: "15.09.2018",
+        excerpt: "ZTP von Questa in Gummersbach.",
+        image: "/images/hunde/questa-ztp.jpg",
+        images: [
+          "/images/hunde/questa-ztp.jpg",
+          "/images/old-site/DSC_4591.jpg",
+          "/images/old-site/DSC_4604.jpg",
+          "/images/old-site/DSC_4610.jpg",
+          "/images/old-site/DSC_4618.jpg",
+          "/images/old-site/DSC_4624.jpg",
+          "/images/old-site/DSC_4632.jpg",
+          "/images/old-site/DSC_4647.jpg",
+          "/images/old-site/DSC_4652.jpg"
+        ]
+      }
     ]
   },
   {
@@ -678,6 +671,19 @@ export const litters: Litter[] = [
       "/images/old-site/w7e341d172226001432d247a76c8310b/Mira.jpg",
       "/images/old-site/w7e341d172226001432d247a76c8310b/Morro aus dem Emsland.jpg",
       "/images/old-site/w7e341d172226001432d247a76c8310b/Mara.jpg"
+    ],
+    updates: [
+      {
+        title: "Morro: Deutscher Meister & Vize-Weltmeister",
+        dateLabel: "Wettkampfsaison",
+        excerpt:
+          "Morro aus dem Emsland wurde Deutscher Meister der Fährtenhunde und Vize-Weltmeister bei den Internationalen Fährtenhunden.",
+        image: "/images/wuerfe/morro-erfolg.jpg",
+        images: [
+          "/images/wuerfe/morro-erfolg.jpg",
+          "/images/old-site/Sonja und Morro.jpg"
+        ]
+      }
     ]
   },
   {

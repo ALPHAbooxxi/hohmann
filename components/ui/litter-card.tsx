@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { CalendarDays, ChevronLeft, ChevronRight, Heart, PawPrint, Maximize2 } from "lucide-react";
+import { CalendarDays, ChevronLeft, ChevronRight, Heart, PawPrint, Maximize2, FileText } from "lucide-react";
 import { Lightbox } from "./lightbox";
+import { LitterUpdatesModal } from "./litter-updates-modal";
 
 import type { Litter } from "@/lib/site-data";
 
@@ -14,6 +15,7 @@ type LitterCardProps = {
 export function LitterCard({ litter }: LitterCardProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showLightbox, setShowLightbox] = useState(false);
+  const [showUpdatesModal, setShowUpdatesModal] = useState(false);
 
   // Combine gallery images and parent images for the lightbox
   const parentImages = (litter.parents || []).map(p => p.image);
@@ -157,6 +159,16 @@ export function LitterCard({ litter }: LitterCardProps) {
                 </ul>
               </div>
             </div>
+
+            <div className="mt-8 pt-6 border-t border-brand-clay/20 flex justify-end">
+              <button
+                onClick={() => setShowUpdatesModal(true)}
+                className="inline-flex items-center gap-2 rounded-xl bg-brand-sand hover:bg-brand-bark hover:text-white px-6 py-3 text-sm font-bold tracking-wide text-brand-ink transition-colors shadow-sm"
+              >
+                <FileText size={18} />
+                Updates & Nachzucht
+              </button>
+            </div>
           </div>
         </div>
       </article>
@@ -166,6 +178,13 @@ export function LitterCard({ litter }: LitterCardProps) {
           images={allImages}
           initialIndex={currentIndex}
           onClose={() => setShowLightbox(false)}
+        />
+      )}
+
+      {showUpdatesModal && (
+        <LitterUpdatesModal
+          litter={litter}
+          onClose={() => setShowUpdatesModal(false)}
         />
       )}
     </>
