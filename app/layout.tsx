@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans, Cormorant_Garamond } from "next/font/google";
 
+import { Analytics } from "@vercel/analytics/next";
 import { ContactStrip } from "@/components/layout/contact-strip";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -85,6 +86,7 @@ export default function RootLayout({
         </main>
         <SiteFooter />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );
