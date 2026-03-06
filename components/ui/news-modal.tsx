@@ -31,24 +31,15 @@ export function NewsModal({ item, onClose }: NewsModalProps) {
 
       return (
             <AnimatePresence>
-                  <div className="fixed inset-0 z-[60] overflow-y-auto">
-                        {/* Backdrop - fixed behind the scrollable content */}
+                  <div className="fixed inset-0 z-[100] overflow-y-auto">
+                        {/* Backdrop - brown as requested, deep dimming */}
                         <motion.div
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               exit={{ opacity: 0 }}
                               onClick={onClose}
-                              className="fixed inset-0 bg-black/80 backdrop-blur-md"
+                              className="fixed inset-0 bg-brand-barkDark/90 backdrop-blur-md"
                         />
-
-                        {/* Persistent Close Button - Fixed to viewport */}
-                        <button
-                              onClick={onClose}
-                              className="fixed right-4 top-4 z-[70] rounded-full bg-white/10 p-3 text-white backdrop-blur-md transition-colors hover:bg-white/20 md:right-8 md:top-8"
-                              aria-label="Schließen"
-                        >
-                              <X size={28} />
-                        </button>
 
                         {/* Scrollable Container Wrapper */}
                         <div className="min-h-full flex items-center justify-center p-4 md:p-12 pointer-events-none">
@@ -57,9 +48,18 @@ export function NewsModal({ item, onClose }: NewsModalProps) {
                                     initial={{ opacity: 0, scale: 0.95, y: 20 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                                    className="relative w-full max-w-4xl overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white shadow-2xl pointer-events-auto"
+                                    className="relative w-full max-w-4xl overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white shadow-2xl pointer-events-auto my-8"
                                     onClick={(e) => e.stopPropagation()}
                               >
+                                    {/* Close Button - BACK INSIDE the popup window */}
+                                    <button
+                                          onClick={onClose}
+                                          className="absolute right-4 top-4 z-20 rounded-full bg-brand-sand/80 p-2 text-brand-barkDark transition-colors hover:bg-brand-barkDark hover:text-white md:right-6 md:top-6"
+                                          aria-label="Schließen"
+                                    >
+                                          <X size={24} />
+                                    </button>
+
                                     <div className="flex flex-col">
                                           {/* Header Image */}
                                           <div className="relative h-64 w-full shrink-0 md:h-80 lg:h-[400px]">

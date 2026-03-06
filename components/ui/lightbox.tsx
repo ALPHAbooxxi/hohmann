@@ -27,16 +27,17 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
             document.body.style.overflow = "hidden";
             return () => {
                   window.removeEventListener("keydown", handleKeyDown);
-                  // We don't unlock here if we are on top of another modal
-                  // But since NewsModal also has the lock, it will handle it when it closes
             };
       }, [onClose]);
 
       return (
-            <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/90 backdrop-blur-xl p-4">
+            <div className="fixed inset-0 z-[200] flex items-center justify-center bg-brand-barkDark/95 backdrop-blur-xl p-4">
+                  {/* Backdrop area for clicking out */}
+                  <div className="absolute inset-0" onClick={onClose} />
+
                   <button
                         onClick={onClose}
-                        className="fixed right-4 top-4 z-[90] rounded-full bg-white/10 p-3 text-white backdrop-blur-md transition hover:bg-white/20 md:right-8 md:top-8"
+                        className="fixed right-4 top-4 z-[210] rounded-full bg-white/10 p-3 text-white backdrop-blur-md transition hover:bg-white/20 md:right-8 md:top-8"
                         aria-label="Schließen"
                   >
                         <X size={32} />
@@ -44,7 +45,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
 
                   <button
                         onClick={(e) => { e.stopPropagation(); prev(); }}
-                        className="absolute left-4 z-[85] rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
+                        className="absolute left-4 z-[205] rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
                         aria-label="Vorheriges Bild"
                   >
                         <ChevronLeft size={40} />
@@ -52,7 +53,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
 
                   <button
                         onClick={(e) => { e.stopPropagation(); next(); }}
-                        className="absolute right-4 z-[85] rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
+                        className="absolute right-4 z-[205] rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
                         aria-label="Nächstes Bild"
                   >
                         <ChevronRight size={40} />
@@ -74,7 +75,7 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
                                                 alt={`Bild ${currentIndex + 1}`}
                                                 width={1600}
                                                 height={1200}
-                                                className="max-h-[85vh] w-full object-contain"
+                                                className="max-h-[85vh] w-full object-contain shadow-2xl"
                                                 priority
                                           />
                                     </div>

@@ -74,11 +74,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${bodyFont.variable} ${accentFont.variable}`}>
-      <body>
+      <body className="flex min-h-screen flex-col">
         <div className="page-bg" aria-hidden="true" />
-        <SiteHeader />
-        <ContactStrip />
-        <main className="mx-auto w-full max-w-content px-4 pt-8 sm:px-6 lg:px-8">{children}</main>
+        <div className="relative z-40">
+          <SiteHeader />
+          <ContactStrip />
+        </div>
+        <main className="relative z-0 mx-auto w-full max-w-content flex-grow px-4 pt-8 sm:px-6 lg:px-8">
+          {children}
+        </main>
         <SiteFooter />
         <CookieBanner />
       </body>
